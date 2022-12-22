@@ -11,15 +11,15 @@ from rest_framework.generics import ListCreateAPIView
 
 # Create your views here.
 
-class AOTListView(ListAPIView):
+class AOTListView(ListCreateAPIView):
     queryset = AOT.objects.all()
     serializer_class= AOTSerializer
     permission_classes=[IsAuthenticatedOrReadOnly]
 
-class AOTCreateView(ListCreateAPIView):
-    queryset = AOT.objects.all()
-    serializer_class= AOTSerializer
-    permission_classes=[IsAuthenticatedOrReadOnly]
+# class AOTCreateView(ListCreateAPIView):
+#     queryset = AOT.objects.all()
+#     serializer_class= AOTSerializer
+#     permission_classes=[IsAuthenticatedOrReadOnly]
 
 
 
